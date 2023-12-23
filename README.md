@@ -38,7 +38,6 @@ It will help Sparkify answer their questions with fast and reliable data.
    * start_time, hour, day, week, month, year, weekday
 
 
-
 ## How to run locally
 
 1. Clone repo and change diretory
@@ -65,12 +64,17 @@ pip install -r requirements.txt
 
 4. Create in AWS console an S3 bucket to for the output to be stored
 
-5. Add necessary info to the dwh.cfg file
+5. Add necessary info to the dwh.cfg and etl.py
 
 ```cfg
 [AWS]
 AWS_ACCESS_KEY_ID='insert_access_key_id_here'
 AWS_SECRET_ACCESS_KEY='insert_secret_access_key_here'
+```
+
+On etl.py, line 156
+```python
+output_data = ""
 ```
 
 6. Run python scripts
@@ -94,3 +98,4 @@ rm -r python-venv
 * [PySpark SQL Types (DataType) with Examples](https://sparkbyexamples.com/pyspark/pyspark-sql-types-datatype-with-examples/) 
 * [Python timestamp to datetime and vice-versa](https://www.programiz.com/python-programming/datetime/timestamp-datetime) 
 * [java.lang.NumberFormatException: in Pyspark when writing to S3](https://stackoverflow.com/questions/71097630/java-lang-numberformatexception-in-pyspark-when-writing-to-s3)
+* [pandas.DataFrame.drop_duplicates](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop_duplicates.html)
